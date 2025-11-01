@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: telegram-gifts-monitor
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_ID
+        value: 25251147
+      - key: API_HASH
+        value: 616c6d1719f3944a7d179238e58cc9c8
+      - key: PHONE
+        value: +14343874582
+      - key: USER_ID
+        value: 7841825969
+      - key: CHECK_INTERVAL
+        value: 300
+      - key: PYTHON_VERSION
+        value: 3.11.0
